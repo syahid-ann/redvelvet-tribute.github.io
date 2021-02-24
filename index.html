@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REDVELVET</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/src/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+
+    
+    
+   
+</head>
+<body class="flex flex-col min-h-full">
+
+
+<!-- Navbar Section -->
+
+<nav class="flex flex-row justify-between items-center bg-red-700">
+    <span class="text-black font-bold lg:text-4xl md:text-4xl text-base ml-1 hover:bg-red-400 rounded transition duration-500 ease-in-out bg-transparent"><a href="">Red Velvet</a></span>
+    <ul class="text-black flex flex-row ">
+        <li class="m-5 hover:bg-red-400 rounded transition duration-500 ease-in-out"><a href="#album">Albums</a></li>
+        <li class="m-5 hover:bg-red-400 rounded transition duration-500 ease-in-out"><a href="#Member">Member</a></li>
+        
+    </ul>
+</nav>
+
+<!-- Hero Image -->
+<section id="hero">
+    <div class="flex flex-col items-center justify-center h-screen jumbotron bg-top bg-cover bg-no-repeat">
+       <h1 class="text-red-300 md:text-5xl text-3xl md:font-normal font-semibold xl:mt-12 xl:ml-96 ml-20 animate__animated animate__fadeInBottomLeft">Welcome to Red Velvet World</h1>
+       <p class="text-red-300 md:text-4xl md:font-thin xl:ml-96 ml-7 font-semibold animate__animated animate__fadeInBottomRight">Just a tribute page for Red Velvet</p>
+       <button id="tour" class="bg-red-300 py-2.5 rounded-md mt-72 transform hover:scale-125 hover:bg-white"> 
+            <a class="p-5 py-2.5" href="#album">Let's Tour</a>
+       </button>
+    </div>
+</section>
+
+<!-- Album -->
+<!--CSS Swiper-->
+<style>
+.swiper-container {
+    width: 100%; 
+    padding-top: 10px; 
+}
+
+.swiper-slide {
+    width: 300px;
+    height: 300px;   
+}   
+</style>
+<!-- Akhir CSS Swiper -->
+<!--Awal Swiper-->
+<h1 class="text-center pb-10 pt-9 bg-red-700" id="album">Albums</h1>
+<div class="swiper-container bg-red-700 ">
+   
+    <div class="swiper-wrapper pb-16 content-center">
+        <div class="swiper-slide"><img src="/dist/img/Perfect_Velvet.jpg" class ="rounded-lg" alt=""> 
+            <p class="text-center pt-2 ">Perfect Velvet</p>    
+            <a class="button bg-red-300 align-middle rounded p-1" href="#ex1" rel="modal:open">See Album</a>
+            
+        </div>
+
+        <div class="swiper-slide"><img src="/dist/img/The Reve day1.png" class="rounded-lg" alt="">
+            <p class="text-center pt-2">The ReVe Vestifal : Day 1</p> 
+            <a class="button bg-red-300 align-middle rounded p-1" href="#ex2" rel="modal:open">See Album</a>
+        </div>
+
+        <div class="swiper-slide"><img src="/dist/img/The ReVe day2.png" class="rounded-lg" alt="">
+            <p class="text-center pt-2">The ReVe Vestifal : Day 2</p>
+            <a class="button bg-red-300 align-middle rounded p-1" href="#ex3" rel="modal:open">See Album</a>
+        </div>
+
+        <div class="swiper-slide"><img src="/dist/img/The ReVe.png" class="rounded-lg" alt="">
+            <p class="text-center pt-2">The ReVe Vestifal : Finale</p>
+            <a class="button bg-red-300 align-middle rounded p-1" href="#ex4" rel="modal:open">See Album</a>
+        </div>
+    </div>  
+     
+</div>
+    <div class="text-center pb-5 pt-5 bg-red-700">
+        <button class="bg-red-300 pt-2 pb-2 rounded-lg transform hover:scale-105 hover:bg-white"> 
+            <a class="px-5 pt-2 pb-2" href="https://open.spotify.com/artist/1z4g3DjTBBZKhvAroFlhOM" target="_blank">See All Album</a>
+       </button>
+       
+    </div>
+
+
+    <div id="next1" class="text-center bg-red-700">
+        <button class="bg-red-300 pt-2 pb-2 rounded-lg transform hover:scale-105 hover:bg-white"> 
+            <a class="px-2 pt-2 pb-2" href="#Member" >Next Tour</a>
+       </button>
+       
+    </div>
+
+
+<!--Script Swiper-->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+    var swiper = new Swiper('.swiper-container', {
+    effect: 'coverflow',
+    grabCursor: false,
+    centeredSlides: true,
+    slidesPerView: 'auto',
+    loop:false,
+    coverflowEffect: {
+        rotate: 50,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        slideShadows: true,
+    },
+    });
+</script>
+<!--Script Swiper-->
+<!--Akhir Swiper-->
+
+<!--Modal-->
+<div id="ex1" class="modal">
+    <p class="text-center">Perfect Velvet </p>
+    <p class="text-center">2017</p>
+    <ul>
+        <li>Peek-A-Boo<a href=""></a></li>
+        <li>I Just <a href=""></a></li>
+        <li>Kingdom Come</li>
+        <li>My Second Date</li>
+        <li>Attaboy</li>
+        <li>Perfect 10</li>
+        <li>About Love</li>
+    </ul>
+
+
+    <a href="#" rel="modal:close" class="bg-red-300 p-1 mt-1 rounded-lg flex justify-center">Close</a>
+</div>
+
+<div id="ex2" class="modal">
+    <p class="text-center">The ReVe Vestifal : Day 1 </p>
+    <p class="text-center">2019</p>
+    <ul>
+        <li>Zimzalabim<a href=""></a></li>
+        <li>Sunny Side Up!<a href=""></a></li>
+        <li>Milkshake</li>
+        <li>LP</li>
+    </ul>
+
+    
+    <a href="#" rel="modal:close" class="bg-red-300 p-1 mt-1 rounded-lg flex justify-center">Close</a>
+</div>
+
+<div id="ex3" class="modal">
+    <p class="text-center">The ReVe Vestifal : Day 2 </p>
+    <p class="text-center">2019</p>
+    <ul>
+        <li>Umpah Umpah<a href=""></a></li>
+        <li>Carpool<a href=""></a></li>
+        <li>Love Is The Way</li>
+        <li>Jumpin'</li>
+        <li>Ladies Night</li>
+        <li>Eyes Locked, Hands</li>
+    </ul>
+
+    
+    <a href="#" rel="modal:close" class="bg-red-300 p-1 mt-1 rounded-lg flex justify-center">Close</a>
+</div>
+
+<div id="ex4" class="modal">
+    <p class="text-center">The ReVe Vestifal : Finale </p>
+    <p class="text-center">2019</p>
+    <ul>
+        <li>Psycho<a href=""></a></li>
+        <li>In & Out<a href=""></a></li>
+        <li>Remember Forever</li>
+        <li>La Rouge</li>
+    </ul>
+
+    
+    <a href="#" rel="modal:close" class="bg-red-300 p-1 mt-1 rounded-lg flex justify-center">Close</a>
+</div>
+
+
+<!--Akhr Modal-->
+
+<!--Awal Member-->
+<h1 class="text-center pb-10 pt-9 bg-red-700">Member</h1>
+<section id="Member">
+    <div class="flex flex-col items-center justify-center mx-auto px-5 bg-red-700 min-h-full "  >
+        <div class="grid lg:grid-cols-3 md:grid-cols-1 grid-cols-1  gap-8 bg-red-700 justify-center mb-10">
+
+        <div class="w-72 mt-9 lg:ml-28 ml-8 justify-self-center" data-aos="fade-down-right">
+            <span class="">
+                <img src="/dist/img/irenepink.jpg" class= "neuro" alt="Irene">
+            </span>
+        </div>
+
+            <div class=" justify-center items-center lg:mt-40 col-span-2" data-aos="zoom-in">
+                <p class="text-center pb-2 "> Irene </p>
+                <p class="text-justify pt-2 glass">
+                Irene (아이린) atau bernama asli Bae Joo Hyun (배주현) adalah seorang penyanyi dan aktris asal Korea Selatan. Dia juga dikenal sebagai anggota dari girl grup bentukan SM Entertainment, Red Velvet. Sebelum debut bersama Red Velvet, Irene sudah mulai dikenal karena dia adalah salah satu ulzzang terkenal di kota kelahiranya. Dia terungkap sebagai trainee SM Entertainment pada bulan Desember 2013 dan menjadi bagian dari grup per debut SM Rookies.
+                </p>
+                <h1 class="pt-10 font-extrabold text-justify">Serial TV : Descendant of the Sun, Women at a Game Company</h1> 
+            </div>
+
+           <!-- JOY -->
+            <div class=" justify-center items-center lg:mt-40 col-span-2" data-aos="zoom-in">
+                <p class="text-center pb-2"> Joy </p>
+                <p class="text-justify pt-2 glass">
+                    Park Soo-young lahir di Provinsi Jeju, Korea Selatan pada 3 September 1996. Ketika masih kecil, Joy tertarik pada musik trot modern. Di sekolah dasar, ia dipengaruhi untuk menjadi penyanyi setelah mendapatkan pujian karena caranya membawakan lagu K-rock dari band Cherry Filter, "Flying Duck". Dia diterima oleh S.M. Entertainment setelah mengikuti "Audisi Global S.M." di Seoul pada tahun 2012. Dia dilatih di bawah agensi ini selama dua tahun, dan selama waktu itulah pelatih vokalnya memberinya nama panggung "Joy".
+                </p>
+                <h1 class="pt-10 font-extrabold text-justify">Drama : Descendant of the Sun, The Liar and His Lover</h1> 
+            </div>
+            <span class ="w-72 mt-9 lg:ml-4 ml-8 row-start-3 lg:row-start-2 lg:col-start-3 justify-self-center" data-aos="fade-right">
+                <img src="/dist/img/joy.jpg" class="neuro" alt="Joy">
+            </span> 
+
+            <!--SEULGI-->
+            <span class ="w-72 mt-9 lg:ml-28 ml-8 justify-self-center" data-aos="fade-left">
+                <img src="/dist/img/seulgi.jpg" class="neuro" alt="Seulgi">
+            </span> 
+            <div class=" justify-center items-center lg:mt-40 mt-10 col-span-2" data-aos="zoom-in">
+                <p class="text-center -mt-10 pb-2"> Seulgi </p>
+                <p class="text-justify pt-2 glass">
+                    Kang Seul Gi (강슬기) atau biasa di panggil dengan Seulgi (슬기) adalah seorang penyanyi asal Korea Selatan, yang juga merupakan anggota dari girl grup Red Velvet. Seulgi lahir di Ansan, Gyeonggi-do, Korea Selatan pada tanggal 10 Februari 1994. Dia menjalani pelatihan di SM Entertainment pada tahun 2007. Di bulan Desember 2013, dia diperkenalkan ke publik dengan menjadi anggota grup predebut, SM ROOKIES, bersama dengan Irene dan Wendy. Seulgi debut sebagai penyanyi sebagai anggota Red Velvet pada tanggal 1 Agustus 2014 dengan mengeluarkan single perdana berjudul “Happiness”.
+                </p>
+            </div>
+
+            <!--WENDY-->
+            <span class ="w-72 mt-9 lg:ml-4 ml-8 row-start-7 lg:row-start-4 lg:col-start-3 justify-self-center" data-aos="fade-right">
+                <img src="/dist/img/wendy.jpg" class="neuro" alt="Wendy">
+            </span> 
+            <div class=" justify-center items-center lg:mt-40 col-span-2" data-aos="zoom-in">
+                <p class="text-center pb-2"> Wendy </p>
+                <p class="text-justify pt-2 glass">
+                    Wendy (웬디) atau bernama lengkap Wendy Son (웬디손) adalah seorang penyanyi asal Korea Selatan. Dia diketahui merupakan anggota dari girl grup Red Velvet. Wendy lahir pada tanggal 21 Februari 1994 di Seongbuk-dong, Seoul, Korea Selatan. Dia bersama keluarganya tinggal di Jecheon sampai Wendy kelas 5 SD sebelum akhirnya pindah ke Kanada. Pada tahun 2010 ia mengikuti audisi online untuk CUBE Entertainment, tapi gagal masuk final. Kemudian, ditahun 2012, Wendy kembali mengikuti audisi untuk SM Entertainment yang di gelar di Kanada. Setelah lolos dalam audisi tersebut, akhirnya Wendy kembali ke Korea untuk menjalani pelatihan di SM Entertainment. 
+                </p>
+            </div>
+
+            <!--YERI-->
+            <span class ="w-72 mt-9 lg:ml-28 ml-8 justify-self-center" data-aos="fade-up-right">
+                <img src="/dist/img/yeri.jpg" class="neuro" alt="Yeri">
+            </span> 
+            <div class=" justify-center items-center lg:mt-40 col-span-2" data-aos="zoom-in">
+                <p class="text-center pb-2"> Yeri </p>
+                <p class="text-justify pt-2 glass">
+                    Yeri (예리) atau mempunyai nama asli Kim Ye Rim (김예림) adalah seorang penyanyi asal Korea Selatan, yang juga merupakan anggota dari girl grup Red Velvet. Yeri mulai bergabung dan menjalani pelatihan di SM Entertainment sejak tahun 2011setelah lolos dalam audisi “SM Global Audition” yang di gelar di Amerika pada tahun 2011. Yeri baru debut bersama Red Velvet pada bulan Maret 2015 saat comeback dengan album mini pertama. 
+                </p>
+                <h1 class="pt-10 font-extrabold text-justify">Film : SMTown The Stage</h1> 
+            </div>                   
+        </div>
+    </div>
+    
+    <div id="keatas" class="text-center bg-red-700 pb-2">
+        <button class="bg-red-300 pt-2 pb-2 rounded-lg transform hover:scale-105 hover:bg-white"> 
+            <a class="px-2 pt-2 pb-2" href="#" >Go Back</a>
+       </button>
+       
+    </div>
+</section>
+<!--Akhir Member-->
+
+<!--Higlihts-->
+<h1 class="text-center pb-10 pt-9 bg-red-700 ">Highlights</h1>
+<div class="video-container grid lg:grid-cols-2 md:grid-cols-1 grid-cols-1 gap-10  bg-red-700 pb-2">
+    <iframe class="lg:ml-28 ml-5 rounded-md md:ml-52 w-80 h-80 md:w-96" src="https://www.youtube.com/embed/uR8Mrt1IpXg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+    <iframe class="lg:ml-40 ml-5 rounded-md md:ml-52 w-80 h-80 md:w-96" src="https://www.youtube.com/embed/6uJf2IT2Zh8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+
+<!--Akhir Higlights-->
+
+
+
+
+
+
+<!-- Footer -->
+
+<footer class="text-white text-center font-medium mt-auto p-5 bg-gray-900">
+    Created by Syahid AN || Made with love
+    <br>
+    Build with Tailwindcss, jQuery, AOS
+</footer>
+
+
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+
+<script>
+    
+   
+
+    $(function() {
+        AOS.init();
+        });  
+    
+    $("#next1").hide();
+
+    $("#tour").click(function(){
+        $("#next1").fadeIn(
+            600
+        );
+    })    
+        
+  
+    
+</script> 
+
+
+</body>
+</html>

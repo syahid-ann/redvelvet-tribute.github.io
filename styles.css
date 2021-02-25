@@ -15,7 +15,7 @@ html {
 }
 
 .jumbotron{
-    background-image: url(/dist/img/redvelvetcover.jpg);
+    background-image: url(redvelvetcover.jpg);
 }
 
 .neuro{
